@@ -37,6 +37,16 @@ chrome.runtime.onInstalled.addListener(function() {
 		console.log('changed to', value);
 	});
 	chrome.omnibox.onInputEntered.addListener(function(value) {
+		// check if has first port and convert to port
+		var values = value.split(' ');
+		if (values.length == 2) {
+			if (values[0] === 'port' && values[1].length == 4) {
+				alert(convertToNumbers(values[1]));
+				return;
+			}
+		}
+
+		// Redirect to port
 		let port = value;
 		// Limit to 4 numbers
 		if (port.length > 4) {
