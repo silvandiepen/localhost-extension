@@ -1,15 +1,13 @@
 {
 	"name": "Localhost",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Convert the port after localhost to numbers",
 	"omnibox": { "keyword": "localhost/" },
 	"background": {
 		"scripts": ["background.js"],
 		"persistent": false
 	},
-	"permissions": [
-    	"tabs"
-    ],
+	"permissions": ["tabs"],
 	"icons": {
 		"16": "icon16.png",
 		"48": "icon48.png",
