@@ -1,7 +1,7 @@
 {
 	"name": "localhost",
 	"short_name": "localhost",
-	"version": "1.0.4",
+	"version": "1.0.5",
 	"description": "Convert the port after localhost to numbers",
 	"omnibox": { "keyword": "localhost/" },
 	"background": {
