@@ -33,7 +33,7 @@ var navigate = function(url) {
 
 chrome.runtime.onInstalled.addListener(function() {
 	chrome.omnibox.onInputChanged.addListener(function(e) {
-		console.log('changed', e);
+		console.log('changed to', e);
 	});
 	chrome.omnibox.onInputEntered.addListener(function(e) {
 		var url = 'http://localhost:' + convertToNumbers(e);
