@@ -41,7 +41,14 @@ chrome.runtime.onInstalled.addListener(function() {
 		var values = value.split(' ');
 		if (values.length == 2) {
 			if (values[0] === 'port' && values[1].length == 4) {
-				alert(convertToNumbers(values[1]));
+				var el = document.createElement('textarea');
+				el.value = convertToNumbers(values[1]);
+				document.body.appendChild(el);
+				el.select();
+				document.execCommand('copy');
+				document.body.removeChild(el);
+
+				alert(`${convertToNumbers(values[1])} is copied to your clipboard.`);
 				return;
 			}
 		}
