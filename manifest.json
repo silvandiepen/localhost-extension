@@ -8,7 +8,11 @@
 		"scripts": ["background.js"],
 		"persistent": false
 	},
-	"permissions": ["tabs", "activeTab", "background", "clipboardWrite"],
+	"permissions": [
+		"tabs", 
+		"activeTab", 
+		"clipboardWrite"
+    ],
 	"icons": {
 		"16": "icon16.png",
 		"48": "icon48.png",
